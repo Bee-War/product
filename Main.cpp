@@ -42,7 +42,7 @@ int main() {
         case 1:
         {
             string name, str; // сохранение имени продукта и строки его данных
-            vector<double> data; // создадим вектор, для передачи данных
+            vector<double> data;
             bool check = true; // проверка на корректность ввода
             cout << "Введите наименование продукта:";
             cin >> name;
@@ -105,7 +105,7 @@ int main() {
                 if (j>0 && j< backpack.size()+1)
                 {
                     j = j - 1;
-                    cout << "Масса " << backpack[j].getName() << " = " << backpack[j].getMass() << endl;
+                    cout << "вес " << backpack[j].getName() << " = " << backpack[j].getMass() << endl;
                 }
                 else
                     cout << "Неверно набран номер...";
@@ -115,23 +115,7 @@ int main() {
             system("pause"); // удержание консоли для удобства чтения
             break;
         case 4:
-            if (backpack.size() != 0)
-            {
-                int j = 0;
-                for (int i = 0; i < backpack.size(); i++) {
-                    cout << i + 1 << "-" << backpack[i].getName() << endl;
-                }
-                cout << "Введите номер продукта, чью температуру вы хотели бы узнать:" << endl;
-                cin >> j;
-                if (j > 0 && j < backpack.size() + 1)
-                {
-                    j = j - 1;
-                    cout << "Температура " << backpack[j].getName() << " = " << backpack[j].getTemperature() << endl;
-                }
-                else
-                    cout << "Неверно набран номер...";
-            }
-            else
+            return 0;
                 cout << "В рюкзаке нет продуктов\n";
             system("pause"); // удержание консоли для удобства чтения
             break;
@@ -220,31 +204,8 @@ int main() {
             system("pause"); // удержание консоли для удобства чтения
             break;
         case 9:
-            if (backpack.size() != 0)
-            {
-                int j = 0;
-                for (int i = 0; i < backpack.size(); i++) {
-                    cout << i + 1 << "-" << backpack[i].getName() << endl;
-                }
-                cout << "Введите номер продукта, которому передаётся тепло:" << endl;
-                cin >> j;
-                if (j > 0 && j < backpack.size() + 1)
-                {
-                    j = j - 1;
-                    double Q = 0;
-                    cout << "Введите количество передаваемого тепла:" << endl;
-                    cin >> Q;
-                    backpack[j].transferHeat(Q);
-                    cout << "Продукту " << backpack[j].getName() << " передано тепло " << endl;
-                    cout << "Температура " << backpack[j].getName() << " = " << backpack[j].getTemperature() << endl;
-                }
-                else
-                    cout << "Неверно набран номер...";
-            }
-            else
-                cout << "В рюкзаке нет продуктов\n";
-            system("pause"); // удержание консоли для удобства чтения
-            break;
+            
+        return 0;
         case 10:
             if (backpack.size() != 0)
             {
